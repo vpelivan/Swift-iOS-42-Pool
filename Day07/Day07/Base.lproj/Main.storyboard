@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Day07" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GQr-yc-tul">
+                                <rect key="frame" x="20" y="433" width="374" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="center" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jP5-3O-rDZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="332" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHy-gA-dXN">
+                                        <rect key="frame" x="340" y="0.0" width="34" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Find!"/>
+                                        <connections>
+                                            <action selector="tapFind:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n5T-wQ-MA1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mHy-gA-dXN" firstAttribute="leading" secondItem="jP5-3O-rDZ" secondAttribute="trailing" constant="8" id="mC2-oM-fXs"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type in a City to find Weather Broadcast" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sm-NS-vIB">
+                                <rect key="frame" x="43.5" y="320.5" width="327.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GQr-yc-tul" secondAttribute="trailing" constant="20" id="97p-sR-dZN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3sm-NS-vIB" secondAttribute="trailing" id="9qm-Tb-l4y"/>
+                            <constraint firstItem="GQr-yc-tul" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ayk-UV-13g"/>
+                            <constraint firstItem="GQr-yc-tul" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BP5-0E-kPf"/>
+                            <constraint firstItem="3sm-NS-vIB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D5A-em-lPb"/>
+                            <constraint firstItem="3sm-NS-vIB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mY2-lR-yvP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jP5-3O-rDZ" secondAttribute="trailing" constant="62" id="mm1-J6-QJd"/>
+                            <constraint firstItem="jP5-3O-rDZ" firstAttribute="top" secondItem="3sm-NS-vIB" secondAttribute="bottom" constant="92" id="xAN-Ve-XsP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="3sm-NS-vIB" id="1C6-ky-063"/>
+                        <outlet property="textField" destination="jP5-3O-rDZ" id="wdD-Z4-9gn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="18.75"/>
+        </scene>
+    </scenes>
+</document>
